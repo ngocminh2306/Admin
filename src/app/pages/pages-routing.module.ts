@@ -7,42 +7,32 @@ import { NotFoundComponent } from './miscellaneous/not-found/not-found.component
 
 import {AuthGuard} from '../serviecs/auth-guard.service'
 
+import {ModalOverlaysModule} from './modal-overlays/modal-overlays.module';
+import {MapsModule} from './maps/maps.module';
+import {MiscellaneousModule} from './miscellaneous/miscellaneous.module';
+import {UserManagerComponent} from './user-manager/User/user-manager.component';
+  import { from } from 'rxjs';
+
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
-  children: [ {
+  children: [ 
+  {
+    path: 'user-manager',
+    component: UserManagerComponent,
+  },
+  {
     path: 'iot-dashboard',
     component: DashboardComponent,
   }, {
-    path: 'ui-features',
-    loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
-  }, {
     path: 'modal-overlays',
-    loadChildren: './modal-overlays/modal-overlays.module#ModalOverlaysModule',
-  }, {
-    path: 'extra-components',
-    loadChildren: './extra-components/extra-components.module#ExtraComponentsModule',
-  }, {
-    path: 'bootstrap',
-    loadChildren: './bootstrap/bootstrap.module#BootstrapModule',
+    loadChildren: ()=> ModalOverlaysModule,
   }, {
     path: 'maps',
-    loadChildren: './maps/maps.module#MapsModule',
-  }, {
-    path: 'charts',
-    loadChildren: './charts/charts.module#ChartsModule',
-  }, {
-    path: 'editors',
-    loadChildren: './editors/editors.module#EditorsModule',
-  }, {
-    path: 'forms',
-    loadChildren: './forms/forms.module#FormsModule',
-  }, {
-    path: 'tables',
-    loadChildren: './tables/tables.module#TablesModule',
+    loadChildren: ()=>MapsModule,
   }, {
     path: 'miscellaneous',
-    loadChildren: './miscellaneous/miscellaneous.module#MiscellaneousModule',
+    loadChildren: ()=>MiscellaneousModule,
   }, {
     path: '',
     redirectTo: 'dashboard',

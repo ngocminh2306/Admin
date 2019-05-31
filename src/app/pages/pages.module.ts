@@ -6,6 +6,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 
+import {UserManagerModule} from './user-manager/user-manager.module';
 const PAGES_COMPONENTS = [
   PagesComponent,
 ];
@@ -16,7 +17,9 @@ const PAGES_COMPONENTS = [
     ThemeModule,
     DashboardModule,
     MiscellaneousModule,
-  ],
+    UserManagerModule
+  ], 
+  
   declarations: [
     ...PAGES_COMPONENTS,
   ],

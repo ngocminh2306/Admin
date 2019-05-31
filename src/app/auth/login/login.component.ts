@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NbLoginComponent } from '@nebular/auth';
+import { NbAuthService } from '@nebular/auth';
 
 @Component({
   selector: 'ngx-login',
@@ -7,5 +8,7 @@ import { NbLoginComponent } from '@nebular/auth';
 })
 
 export class NgxLoginComponent extends NbLoginComponent {
-  user: any
+  // constructor(private authService: NbAuthService){
+  //   super();
+  // }
 }
