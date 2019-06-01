@@ -5,6 +5,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { ThemeModule } from '../../@theme/theme.module';
 
 import {UserManagerComponent} from './User/user-manager.component';
+import {RoleManagerComponent} from './role/role-manager.component';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
@@ -18,7 +19,8 @@ import { ModalComponent } from '../../@theme/components/error-modal/modal.compon
   ],
   declarations: [
     ModalComponent,
-    UserManagerComponent
+    UserManagerComponent,
+    RoleManagerComponent
   ],
   entryComponents: [
     ModalComponent

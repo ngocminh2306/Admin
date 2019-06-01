@@ -15,8 +15,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-layout-default',
     children: [
       {
-        title: 'Danh sách',
+        title: 'Danh sách tài khoản ',
         link: '/pages/user-manager',
+      },
+      {
+        title: 'Danh sách role',
+        link: '/pages/role-manager',
       }
     ],
   },

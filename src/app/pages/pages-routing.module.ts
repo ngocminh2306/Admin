@@ -8,6 +8,7 @@ import { NotFoundComponent } from './miscellaneous/not-found/not-found.component
 import {AuthGuard} from '../serviecs/auth-guard.service'
 
 import {UserManagerComponent} from './user-manager/User/user-manager.component';
+import {RoleManagerComponent} from './user-manager/role/role-manager.component';
 
 const routes: Routes = [{
   path: '',
@@ -16,6 +17,10 @@ const routes: Routes = [{
   {
     path: 'user-manager',
     component: UserManagerComponent,
+  },
+  {
+    path: 'role-manager',
+    component: RoleManagerComponent,
   },
   {
     path: 'iot-dashboard',
