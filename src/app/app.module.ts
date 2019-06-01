@@ -21,6 +21,7 @@ import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
 import { NbPasswordAuthStrategy, NbAuthModule,NbAuthJWTToken, 
   NbAuthSimpleInterceptor, NbAuthJWTInterceptor,
   NB_AUTH_TOKEN_INTERCEPTOR_FILTER } from '@nebular/auth';
+  
 import { AuthGuard } from './serviecs/auth-guard.service';
 import { RoleProvider } from './serviecs/role.provider';
 import { HttpService } from './serviecs/http-serviece';

@@ -8,7 +8,7 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 
 import {UserManagerModule} from './user-manager/user-manager.module';
 const PAGES_COMPONENTS = [
-  PagesComponent,
+  PagesComponent, 
 ];
 
 @NgModule({
@@ -17,7 +17,7 @@ const PAGES_COMPONENTS = [
     ThemeModule,
     DashboardModule,
     MiscellaneousModule,
-    UserManagerModule
+    UserManagerModule,
   ], 
   
   declarations: [

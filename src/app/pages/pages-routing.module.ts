@@ -7,11 +7,7 @@ import { NotFoundComponent } from './miscellaneous/not-found/not-found.component
 
 import {AuthGuard} from '../serviecs/auth-guard.service'
 
-import {ModalOverlaysModule} from './modal-overlays/modal-overlays.module';
-import {MapsModule} from './maps/maps.module';
-import {MiscellaneousModule} from './miscellaneous/miscellaneous.module';
 import {UserManagerComponent} from './user-manager/User/user-manager.component';
-  import { from } from 'rxjs';
 
 const routes: Routes = [{
   path: '',
@@ -24,16 +20,8 @@ const routes: Routes = [{
   {
     path: 'iot-dashboard',
     component: DashboardComponent,
-  }, {
-    path: 'modal-overlays',
-    loadChildren: ()=> ModalOverlaysModule,
-  }, {
-    path: 'maps',
-    loadChildren: ()=>MapsModule,
-  }, {
-    path: 'miscellaneous',
-    loadChildren: ()=>MiscellaneousModule,
-  }, {
+  }, 
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',

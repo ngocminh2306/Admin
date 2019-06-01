@@ -1,7 +1,9 @@
 import {Component} from '@angular/core';
 import {HttpService, host} from '../../../serviecs/http-serviece';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { HttpParams } from '@angular/common/http';
 import { LocalDataSource } from 'ng2-smart-table';
+import {ModalComponent} from '../../../@theme/components/error-modal/modal.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngx-user-manager',
@@ -14,11 +16,13 @@ export class UserManagerComponent {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
+      confirmCreate: true,
     },
     edit: {
       editButtonContent: '<i class="nb-edit"></i>',
       saveButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
+      confirmSave: true,
     },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
@@ -30,15 +34,15 @@ export class UserManagerComponent {
         type: 'number',
       },
       userName: {
-        title: 'First Name',
+        title: 'User Name',
         type: 'string',
       },
       name: {
-        title: 'Last Name',
+        title: 'Name',
         type: 'string',
       },
       surname: {
-        title: 'Username',
+        title: 'Surname',
         type: 'string',
       },
       emailAddress: {
@@ -46,34 +50,72 @@ export class UserManagerComponent {
         type: 'string',
       },
       lastLoginTime: {
-        title: 'Age',
-        type: 'number',
+        title: 'Đăng nhập lần cuối',
+        type: 'datetime',
       },
     }
   }
   source: LocalDataSource = new LocalDataSource();
-  constructor(private http: HttpClient, private httpService: HttpService){
-    // this.httpService.get(host + 'services/app/User/GetAll').subscribe((res)=>{
-    //   console.log(res);
-    // })
 
-    // this.http.get(host + 'services/app/User/GetAll').subscribe((res)=>{
-    //   console.log(res);
-    // })
-    this.http.get(host + 'services/app/User/GetAll')
+  constructor(private httpService: HttpService,
+    private modalService: NgbModal){
+ 
+    this.httpService.get('services/app/User/GetAll')
     .toPromise().then((res: any)=>{
+
       console.log(res);
+
       if(res.success){
-        this.source.load(res.items);
+
+        this.source.load(res.result.items);
+
       }else{
-        alert('that bai!');
+
+
       }
     }).catch((error)=>{
-      alert('error');
     });
   }
-  onDeleteConfirm(event): void {
+
+  onDeleteConfiarm(event): void {
+
+    // if (window.confirm('Are you sure you want to delete?')) {
+    //   event.confirm.resolve();
+    // } else {
+    //   event.confirm.reject();
+    // }
+  }
+  onSaveConfirm(event): void {
+    console.log(event.newData);
+    this.httpService.put('services/app/User/Update',event.newData)
+    .toPromise().then((res: any)=>{
+
+      console.log(res);
+
+      if(res.success){
+
+        this.source.load(res.result.items);
+
+      }else{
+
+        alert('that bai!');
+
+      }
+    }).catch((error)=>{
+
+      alert('error');
+
+    });
     if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+  onCreateConfirm(event): void {
+    console.log(event);
+    if (window.confirm('Are you sure you want to delete?')) {
+
       event.confirm.resolve();
     } else {
       event.confirm.reject();

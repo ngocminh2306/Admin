@@ -7,7 +7,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/iot-dashboard',
   },
   {
-    title: 'FEATURES',
+    title: 'Menu',
     group: true,
   },
   {
@@ -123,32 +123,32 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //     },
   //   ],
   // },
-  {
-    title: 'Modal & Overlays',
-    icon: 'nb-layout-default',
-    children: [
-      {
-        title: 'Dialog',
-        link: '/pages/modal-overlays/dialog',
-      },
-      {
-        title: 'Window',
-        link: '/pages/modal-overlays/window',
-      },
-      {
-        title: 'Popover',
-        link: '/pages/modal-overlays/popover',
-      },
-      {
-        title: 'Toastr',
-        link: '/pages/modal-overlays/toastr',
-      },
-      {
-        title: 'Tooltip',
-        link: '/pages/modal-overlays/tooltip',
-      },
-    ],
-  },
+  // {
+  //   title: 'Modal & Overlays',
+  //   icon: 'nb-layout-default',
+  //   children: [
+  //     {
+  //       title: 'Dialog',
+  //       link: '/pages/modal-overlays/dialog',
+  //     },
+  //     {
+  //       title: 'Window',
+  //       link: '/pages/modal-overlays/window',
+  //     },
+  //     {
+  //       title: 'Popover',
+  //       link: '/pages/modal-overlays/popover',
+  //     },
+  //     {
+  //       title: 'Toastr',
+  //       link: '/pages/modal-overlays/toastr',
+  //     },
+  //     {
+  //       title: 'Tooltip',
+  //       link: '/pages/modal-overlays/tooltip',
+  //     },
+  //   ],
+  // },
   // {
   //   title: 'Bootstrap',
   //   icon: 'nb-gear',
@@ -167,28 +167,28 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //     },
   //   ],
   // },
-  {
-    title: 'Maps',
-    icon: 'nb-location',
-    children: [
-      {
-        title: 'Google Maps',
-        link: '/pages/maps/gmaps',
-      },
-      {
-        title: 'Leaflet Maps',
-        link: '/pages/maps/leaflet',
-      },
-      {
-        title: 'Bubble Maps',
-        link: '/pages/maps/bubble',
-      },
-      {
-        title: 'Search Maps',
-        link: '/pages/maps/searchmap',
-      },
-    ],
-  },
+  // {
+  //   title: 'Maps',
+  //   icon: 'nb-location',
+  //   children: [
+  //     {
+  //       title: 'Google Maps',
+  //       link: '/pages/maps/gmaps',
+  //     },
+  //     {
+  //       title: 'Leaflet Maps',
+  //       link: '/pages/maps/leaflet',
+  //     },
+  //     {
+  //       title: 'Bubble Maps',
+  //       link: '/pages/maps/bubble',
+  //     },
+  //     {
+  //       title: 'Search Maps',
+  //       link: '/pages/maps/searchmap',
+  //     },
+  //   ],
+  // },
   // {
   //   title: 'Charts',
   //   icon: 'nb-bar-chart',
@@ -231,36 +231,36 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //     },
   //   ],
   // },
-  {
-    title: 'Miscellaneous',
-    icon: 'nb-shuffle',
-    children: [
-      {
-        title: '404',
-        link: '/pages/miscellaneous/404',
-      },
-    ],
-  },
-  {
-    title: 'Auth',
-    icon: 'nb-locked',
-    children: [
-      {
-        title: 'Login',
-        link: '/auth/login',
-      },
-      {
-        title: 'Register',
-        link: '/auth/register',
-      },
-      {
-        title: 'Request Password',
-        link: '/auth/request-password',
-      },
-      {
-        title: 'Reset Password',
-        link: '/auth/reset-password',
-      },
-    ],
-  },
+  // {
+  //   title: 'Miscellaneous',
+  //   icon: 'nb-shuffle',
+  //   children: [
+  //     {
+  //       title: '404',
+  //       link: '/pages/miscellaneous/404',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Auth',
+  //   icon: 'nb-locked',
+  //   children: [
+  //     {
+  //       title: 'Login',
+  //       link: '/auth/login',
+  //     },
+  //     {
+  //       title: 'Register',
+  //       link: '/auth/register',
+  //     },
+  //     {
+  //       title: 'Request Password',
+  //       link: '/auth/request-password',
+  //     },
+  //     {
+  //       title: 'Reset Password',
+  //       link: '/auth/reset-password',
+  //     },
+  //   ],
+  // },
 ];
